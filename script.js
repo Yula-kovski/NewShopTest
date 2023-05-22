@@ -17,6 +17,7 @@ let links = document.querySelectorAll('.header__menu a');
   links.forEach(function (element) {//Взять каждый элемент отдельный
   element.addEventListener('click', function () {//при клике на него
   menu.classList.remove('active'); // удалить класс active 
+  document.querySelector('.menu-btn').classList.remove('active'); 
   })
 })
 
