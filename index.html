@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <title>NewShop</title>
+</head>
+<body>
+<!-- HEADER START -->
+<header class="header" id="header">
+    <div class="container">
+        <a href="#" class="header__logo">
+            <img src="img/logos.svg" alt="logo">
+            New <span>Shop</span>
+        </a>
+        
+        <ul class="header__menu">
+            <li><a class="menu__link" onclick="openCity(event, 'cloth')" href="#cloth">Одежда</a></li>
+            <li><a class="menu__link" onclick="openCity(event, 'shoes')" href="#shoes">Обувь</a></li>
+            <li><a class="menu__link" onclick="openCity(event, 'electronics')" href="#electronics">Электроника</a></li>
+            <li><a class="menu__link" onclick="openCity(event, 'books')" href="#books">Книги</a></li>
+        </ul>
+
+        <div class="btns"> 
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div> 
+            
+        <label class="header__switch">
+            <input type="checkbox" onchange="changeTheme(this.checked)">
+            <span class="header__slider round"></span>
+        </label>
+    </div>
+</header>
+<!-- HEADER END -->
+
+<!-- WRAPPER START -->
+
+<div class="wrapper">
+    <div class="content">
+    <!-- INTRO START -->
+        <section class="intro" id="top">
+            <div class="container">
+                <div class="intro__content">
+                    <h2 class="title"><span>NewShop</span></h2>
+                    <p class="subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum est excepturi ad modi culpa non illum, <span>NewShop</span>  fugit officia dicta recusandae!</p>
+                </div>
+                <img src="img/imgelogo.jpg" alt="logo">
+            </div>
+        </section> 
+        <!-- INTRO END -->
+        
+        <!--  CATEGORIES  -->
+        <section class="categories__menu">
+            <div class="container">
+        
+                <h2>Категории</h2>
+
+                <div class="categories">
+                    <button class="category__name"  onclick="openCity(event, 'cloth')">Одежда</button>
+                    <button class="category__name"  onclick="openCity(event, 'shoes')">Обувь</button>
+                    <button class="category__name"  onclick="openCity(event, 'electronics')">Электроника</button>
+                    <button class="category__name"  onclick="openCity(event, 'books')">Книги</button>
+                </div>
+
+                <div class="wrapper__selected ">
+                    <div class="form-popup" id="myForm">
+                        
+                        <div class="form-container">
+                            <div><input type="number" min="1" value="1"> шт</div>
+                                <p>Выбрать цвет</p>
+                            <div>
+                                <input type="button" class="custom-button" value="Красный">
+                                <input type="button" class="custom-button" value="Черный">
+                                <input type="button" class="custom-button" value="Синий">
+                            </div>
+                            <input class="input__text" type="text" name="usrname" maxlength="200" placeholder="Ваш комментарий..."><br>
+                            <div class="form__button">
+                                <button class="btn btn--outline btn--big" onclick="showPurchaseMessage()">Купить</button>
+                                <button type="button" class="btn " onclick="closeForm()">Закрыть</button>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="cloth" class="categorycontent">
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/cloth.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/cloth.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/cloth.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/cloth.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="02.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/cloth.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/cloth.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/cloth.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/cloth.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/cloth.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/cloth.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/cloth.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/cloth.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                </div>
+        
+                <div id="shoes" class="categorycontent">
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/shoes.png" alt="Free plan">
+        
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="electronics" class="categorycontent">
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div> <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div> 
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/electronics.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="03.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                </div>
+
+                <div id="books" class="categorycontent">
+            
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/book.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="04.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div> 
+            
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/book.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="04.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/book.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="04.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/book.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="04.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/book.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="04.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/book.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="04.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/book.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="04.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/book.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="04.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/book.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="04.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/book.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="04.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/book.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="04.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+                        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/book.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="04.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                    <div class="plan__wrapper">
+                        <div class="wrapper__content">
+                            <img src="img/book.png" alt="Free plan">
+                                <h3>подпись к изображению</h3>
+                                <p data-date="04.05.2022"></p>
+                        </div>
+                        <div class="wrapper__selected">
+                            <button class="open-button btn btn--outline btn--big" onclick="openForm()">Купить</button>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CATEGORIES__MENU END-->
+        <div class="btn-up btn-up_hide"></div>
+    </div>
+<!-- WRAPPER END -->
+
+<!-- FOOTER START -->
+
+<footer class="footer" id="footer">
+    <div class="container">
+    
+        <div class="footer__content"> 
+        <ul class="footer__menu">
+            <li><a class="menu__link" onclick="openCity(event, 'cloth')" href="#cloth">Одежда</a></li>
+            <li><a class="menu__link" onclick="openCity(event, 'shoes')" href="#shoes">Обувь</a></li>
+            <li><a class="menu__link" onclick="openCity(event, 'electronics')" href="#electronics">Электроника</a></li>
+            <li><a class="menu__link" onclick="openCity(event, 'books')" href="#books">Книги</a></li>
+        </ul>
+        
+        <a href="#" class="header__logo">
+            <img src="img/logos.svg" alt="logo">
+            New <span>Shop</span>
+        </a>
+        
+        </div>
+    </div>
+</footer>
+<!-- FOOTER END -->
+</div>
+    
+<!-- Scroll button -->
+<script src="script.js"></script>
+</body>
+</html>
