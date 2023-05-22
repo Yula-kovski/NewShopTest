@@ -100,13 +100,13 @@ body {
 /* =============================================== form-container ======== */
 
 .form-container {
-	padding: 50px 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .form-container p{
-	margin: 25px 0;
+  margin: 25px 0;
 }
 .input__text{
   width: 80%;
@@ -143,7 +143,7 @@ input[type="number"]{
   text-align: center;
   right: 0;
   height: 100%;
-	color: #141414;
+  color: #141414;
 }
 
 .custom-button {
@@ -163,7 +163,7 @@ input[type="number"]{
 .custom-button:nth-child(2){
   background-color: #000000;
   color: #ccc;
-  margin: 0 15px;
+  
 }
 .custom-button:nth-child(3){
   background-color: #0800ff;
